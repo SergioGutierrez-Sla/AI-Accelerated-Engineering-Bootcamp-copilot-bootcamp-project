@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import { useAuth } from '../context/AuthContext'
 
 export function DashboardPage() {
@@ -33,6 +34,16 @@ export function DashboardPage() {
           <p className="mt-1 text-sm text-gray-500">
             Pet management is coming in the next feature. Stay tuned!
           </p>
+          {/* Dev shortcut — seed pet is ID 1 */}
+          <div className="mt-6 rounded-lg border border-amber-200 bg-amber-50 p-3">
+            <p className="text-xs text-amber-700 font-medium">Dev shortcut</p>
+            <Link
+              to="/pets/1"
+              className="mt-1 inline-block text-sm text-blue-600 hover:underline"
+            >
+              Open seed pet (Buddy) →
+            </Link>
+          </div>
         </div>
       </main>
     </div>

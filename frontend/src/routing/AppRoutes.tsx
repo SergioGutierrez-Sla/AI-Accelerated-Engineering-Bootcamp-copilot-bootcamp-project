@@ -5,6 +5,7 @@ import { EmailVerificationPage } from '../pages/EmailVerificationPage'
 import { ForgotPasswordPage } from '../pages/ForgotPasswordPage'
 import { ResetPasswordPage } from '../pages/ResetPasswordPage'
 import { DashboardPage } from '../pages/DashboardPage'
+import { PetDetailPage } from '../pages/PetDetailPage'
 import { ProtectedRoute } from './ProtectedRoute'
 
 export function AppRoutes() {
@@ -20,6 +21,14 @@ export function AppRoutes() {
         element={
           <ProtectedRoute>
             <DashboardPage />
+          </ProtectedRoute>
+        }
+      />
+      <Route
+        path="/pets/:petId"
+        element={
+          <ProtectedRoute>
+            <PetDetailPage />
           </ProtectedRoute>
         }
       />
